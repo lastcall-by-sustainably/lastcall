@@ -104,24 +104,24 @@
 	];
 </script>
 
-<div class="mx-auto flex min-h-screen max-w-md flex-col bg-background">
+<div class="mx-auto flex min-h-svh w-full max-w-md flex-col overflow-x-hidden bg-background">
 	<header class="p-4 pb-3 pt-6">
-		<div class="mb-4 flex items-center justify-between">
-			<div class="flex items-center gap-3">
+		<div class="mb-4 flex items-center justify-between gap-3">
+			<div class="flex min-w-0 flex-1 items-center gap-3">
 				<a href="/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
 					<ArrowLeft class="h-7 w-7" strokeWidth={2.5} />
 				</a>
-				<h1 class="text-3xl font-bold text-foreground">Catalog</h1>
+				<h1 class="truncate text-3xl font-bold text-foreground">Catalog</h1>
 			</div>
 
-			<enhanced:img src={catalogLogo} alt="Stop & Shop" class="h-10 w-auto object-contain" />
+			<enhanced:img src={catalogLogo} alt="Stop & Shop" class="h-10 w-auto shrink-0 object-contain" />
 		</div>
 
-		<div class="flex gap-2 overflow-x-auto pb-1">
+		<div class="flex flex-wrap gap-2 pb-1">
 			{#each filters as filter (filter.id)}
 				<button
 					onclick={() => (activeFilter = filter.id)}
-					class={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${activeFilter ===
+					class={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${activeFilter ===
 					filter.id
 						? 'bg-[#3d5a3d] text-white'
 						: 'bg-[#b8d9b4] text-foreground'}`}
