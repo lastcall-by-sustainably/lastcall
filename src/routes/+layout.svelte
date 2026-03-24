@@ -5,6 +5,7 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import Header from '$lib/components/header.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -21,4 +22,6 @@
 	<main class="flex-1 flex flex-col">
 		{@render children()}
 	</main>
+
+	<Footer class={page.url.pathname === '/' ? 'hidden' : undefined} />
 </div>

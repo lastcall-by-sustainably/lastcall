@@ -1,0 +1,40 @@
+<script lang="ts">
+  import { page } from '$app/state';
+  import { Button } from '$lib/components/ui/button';
+  import { Separator } from '$lib/components/ui/separator';
+  import SearchIcon from '@lucide/svelte/icons/search';
+  import ShoppingBagIcon from '@lucide/svelte/icons/shopping-bag';
+  import CircleUserIcon from '@lucide/svelte/icons/circle-user';
+
+  interface Props {
+    class?: string;
+  }
+  let { class: className }: Props = $props();
+</script>
+
+<div class={['w-full flex flex-col items-center', className]}>
+  <Separator />
+
+  <div class="w-full flex flex-row items-center p-6">
+    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/browse">
+      <div class="flex flex-col items-center text-lg gap-1">
+        <SearchIcon class="size-8" />
+        Browse
+      </div>
+    </Button>
+
+    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/cart">
+      <div class="flex flex-col items-center text-lg gap-1">
+        <ShoppingBagIcon class="size-8" />
+        Cart
+      </div>
+    </Button>
+
+    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/account">
+      <div class="flex flex-col items-center text-lg gap-1">
+        <CircleUserIcon class="size-8" />
+        Account
+      </div>
+    </Button>
+  </div>
+</div>
