@@ -12,29 +12,31 @@
   let { class: className }: Props = $props();
 </script>
 
-<div class={['w-full flex flex-col items-center', className]}>
-  <Separator />
+<div class={['fixed inset-x-0 bottom-0 z-50', className]}>
+  <div class="mx-auto w-full max-w-md flex flex-col bg-background">
+    <Separator />
 
-  <div class="w-full flex flex-row items-center p-4">
-    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/browse">
-      <div class="flex flex-col items-center gap-1">
-        <SearchIcon class="size-6" />
-        Browse
-      </div>
-    </Button>
+    <div class="w-full flex flex-row items-center p-4">
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/browse">
+        <div class="flex flex-col items-center gap-1">
+          <SearchIcon class="size-6" />
+          Browse
+        </div>
+      </Button>
 
-    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/cart">
-      <div class="flex flex-col items-center gap-1">
-        <ShoppingBagIcon class="size-6" />
-        Cart
-      </div>
-    </Button>
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/cart">
+        <div class="flex flex-col items-center gap-1">
+          <ShoppingBagIcon class="size-6" />
+          Cart
+        </div>
+      </Button>
 
-    <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/account">
-      <div class="flex flex-col items-center gap-1">
-        <CircleUserIcon class="size-6" />
-        Account
-      </div>
-    </Button>
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/account">
+        <div class="flex flex-col items-center gap-1">
+          <CircleUserIcon class="size-6" />
+          Account
+        </div>
+      </Button>
+    </div>
   </div>
 </div>
