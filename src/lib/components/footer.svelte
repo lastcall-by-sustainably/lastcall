@@ -15,24 +15,24 @@
 <div class={['w-full flex flex-col items-center', className]}>
   <Separator />
 
-  <div class="w-full flex flex-row items-center p-6">
+  <div class="w-full flex flex-row items-center p-4">
     <Button class={['flex-1 h-full', page.url.pathname.startsWith('/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/browse">
-      <div class="flex flex-col items-center text-lg gap-1">
-        <SearchIcon class="size-8" />
+      <div class="flex flex-col items-center gap-1">
+        <SearchIcon class="size-6" />
         Browse
       </div>
     </Button>
 
     <Button class={['flex-1 h-full', page.url.pathname.startsWith('/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/cart">
-      <div class="flex flex-col items-center text-lg gap-1">
-        <ShoppingBagIcon class="size-8" />
+      <div class="flex flex-col items-center gap-1">
+        <ShoppingBagIcon class="size-6" />
         Cart
       </div>
     </Button>
 
     <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/account">
-      <div class="flex flex-col items-center text-lg gap-1">
-        <CircleUserIcon class="size-8" />
+      <div class="flex flex-col items-center gap-1">
+        <CircleUserIcon class="size-6" />
         Account
       </div>
     </Button>
