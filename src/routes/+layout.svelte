@@ -15,7 +15,7 @@
 
 <Toaster richColors />
 
-<div class={['min-h-svh flex flex-col items-center max-w-md mx-auto', page.url.pathname === '/' && 'bg-green-100']}>
+<div class={['min-h-svh flex flex-col items-center max-w-md mx-auto', page.url.pathname === '/' && 'bg-[#e6f5de]']}>
 	<Header />
 
 	<main class="flex-1 flex flex-col">
