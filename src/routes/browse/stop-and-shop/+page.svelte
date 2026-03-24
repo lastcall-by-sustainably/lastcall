@@ -157,7 +157,7 @@
 						<h3 class="line-clamp-2 text-center text-sm font-semibold text-foreground">{product.name}</h3>
 					</div>
 
-					<a href="/cart" class="block w-full rounded-full bg-[#3d5a3d] py-2 text-center text-sm font-medium text-white">
+					<a href="/cart" class="block w-full rounded-full bg-[#3d5a3d] py-2 text-center text-xs font-medium text-white">
 						Add to Cart ({product.available} Available)
 					</a>
 				</div>
