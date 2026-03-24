@@ -31,7 +31,7 @@
         </div>
       </Button>
 
-      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/account">
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/">
         <div class="flex flex-col items-center gap-1">
           <CircleUserIcon class="size-6" />
           Account
