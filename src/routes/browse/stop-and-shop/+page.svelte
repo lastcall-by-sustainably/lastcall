@@ -108,9 +108,9 @@
 	<header class="p-4 pb-3 pt-6">
 		<div class="mb-4 flex items-center justify-between">
 			<div class="flex items-center gap-3">
-				<button class="text-[#5a7a5a]" aria-label="Go back">
+				<a href="/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
 					<ArrowLeft class="h-7 w-7" strokeWidth={2.5} />
-				</button>
+				</a>
 				<h1 class="text-3xl font-bold text-foreground">Catalog</h1>
 			</div>
 
@@ -157,9 +157,9 @@
 						<h3 class="line-clamp-2 text-center text-sm font-semibold text-foreground">{product.name}</h3>
 					</div>
 
-					<button class="w-full rounded-full bg-[#3d5a3d] py-2 text-sm font-medium text-white">
+					<a href="/cart" class="block w-full rounded-full bg-[#3d5a3d] py-2 text-center text-sm font-medium text-white">
 						Add to Cart ({product.available} Available)
-					</button>
+					</a>
 				</div>
 			{/each}
 		</div>
