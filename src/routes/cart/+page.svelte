@@ -85,7 +85,7 @@
     <h1 class="text-2xl font-bold text-foreground">Shopping Cart</h1>
   </header>
 
-  <div class="flex-1 overflow-auto px-4 pb-4">
+  <div class="flex-1 overflow-auto px-4 pb-32">
     <div class="space-y-3">
       {#each cartItems as item (item.id)}
         <div class="flex gap-3 rounded-xl bg-[#f5f8f2] p-3">
