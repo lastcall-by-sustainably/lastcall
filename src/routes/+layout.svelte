@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { page } from '$app/state';
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher } from 'mode-watcher';
 	import { Toaster } from '$lib/components/ui/sonner';
@@ -14,7 +15,7 @@
 
 <Toaster richColors />
 
-<div class="min-h-svh flex flex-col items-center max-w-md mx-auto">
+<div class={['min-h-svh flex flex-col items-center max-w-md mx-auto', page.url.pathname === '/' && 'bg-green-100']}>
 	<Header />
 
 	<main class="flex-1 flex flex-col">
