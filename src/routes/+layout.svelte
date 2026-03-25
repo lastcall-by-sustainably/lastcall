@@ -15,7 +15,7 @@
 
 <ModeWatcher defaultMode="light" />
 
-<Toaster richColors />
+<Toaster richColors position="top-center" />
 
 {#if navigating.to}
   <div
