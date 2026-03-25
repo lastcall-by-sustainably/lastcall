@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { toast } from 'svelte-sonner';
   import ArrowLeft from '@lucide/svelte/icons/arrow-left';
   import Minus from '@lucide/svelte/icons/minus';
   import Plus from '@lucide/svelte/icons/plus';
@@ -149,6 +150,7 @@
 
     <button
       class="flex w-full items-center justify-center gap-3 rounded-full bg-[#3d5a3d] py-4 font-medium text-white"
+      onclick={() => toast.success('Thanks for your purchase!')}
     >
       <ShoppingCart class="h-5 w-5" />
       Proceed to checkout ({totalItems} items)
