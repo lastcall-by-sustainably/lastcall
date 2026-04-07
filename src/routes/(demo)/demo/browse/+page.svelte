@@ -120,7 +120,7 @@
 								</div>
 							</div>
 							<a
-								href="/browse/stop-and-shop"
+								href="/demo/browse/stop-and-shop"
 								class="ml-4 whitespace-nowrap rounded-full bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
 							>
 								Select

@@ -80,7 +80,7 @@
 
 <div class="mx-auto flex min-h-screen max-w-md flex-col bg-background">
   <header class="flex items-center gap-4 p-4 pt-6">
-    <a href="/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
+    <a href="/demo/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
       <ArrowLeft class="h-7 w-7" strokeWidth={2.5} />
     </a>
     <h1 class="text-2xl font-bold text-foreground">Shopping Cart</h1>
@@ -125,7 +125,7 @@
     </div>
 
     <a
-      href="/browse"
+      href="/demo/browse"
       class="mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-[#8db48e] py-4 font-medium text-white"
     >
       <ArrowLeft class="h-5 w-5" />
