@@ -140,7 +140,7 @@
 		</div>
 	</header>
 
-	<div class="flex-1 overflow-auto px-4 pb-24">
+	<div class="flex-1 overflow-auto px-4 pb-24 pt-1">
 		<div class="grid grid-cols-2 gap-3">
 			{#each products as product (product.id)}
 				<div class="flex flex-col gap-3">
