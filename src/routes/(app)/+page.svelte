@@ -13,6 +13,7 @@
   import Leaf from "@lucide/svelte/icons/leaf";
   import CircleDollarSign from "@lucide/svelte/icons/circle-dollar-sign";
   import Store from "@lucide/svelte/icons/store";
+  import GraduationCap from "@lucide/svelte/icons/graduation-cap";
 </script>
 
 <SEO />
@@ -94,7 +95,7 @@
         <p class="text-muted-foreground text-lg">Choose a plan that fits your grocery needs.</p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Store class="w-6 h-6" />
@@ -104,6 +105,17 @@
             Pay for an itemized bag when you please. Does not require a subscription. Options range from $0.25 to $7.50.
           </p>
           <div class="text-2xl font-bold">Pay as you go</div>
+        </Card.Root>
+
+        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+          <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+            <GraduationCap class="w-6 h-6" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">Student Plan</h3>
+          <p class="text-muted-foreground mb-6 flex-1">
+            Requires an active .edu email address. Get $25 of value to use every single month on products.
+          </p>
+          <div class="text-auth"><span class="text-4xl font-bold">$9</span><span class="text-muted-foreground">/mo</span></div>
         </Card.Root>
         
         <Card.Root class="border-2 border-primary rounded-3xl p-8 relative overflow-hidden shadow-md">
@@ -115,7 +127,7 @@
           <p class="text-muted-foreground mb-6 flex-1">
             Get $25 of value to use every single month. Replenishes monthly for consistent savings.
           </p>
-          <div class="text-auth"><span class="text-4xl font-bold">$12.99</span><span class="text-muted-foreground">/mo</span></div>
+          <div class="text-auth"><span class="text-4xl font-bold">$12</span><span class="text-muted-foreground">/mo</span></div>
         </Card.Root>
         
         <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
