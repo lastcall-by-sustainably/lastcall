@@ -1,5 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/seo.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import * as Card from '$lib/components/ui/card';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import catalogLogo from '$lib/assets/demo/browse/stop-and-shop-logo.png?enhanced';
 
@@ -111,9 +113,9 @@
 	<header class="p-4 pb-3 pt-6">
 		<div class="mb-4 flex items-center justify-between gap-3">
 			<div class="flex min-w-0 flex-1 items-center gap-3">
-				<a href="/demo/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
-					<ArrowLeft class="h-7 w-7" strokeWidth={2.5} />
-				</a>
+				<Button href="/demo/browse" variant="ghost" size="icon" class="h-10 w-10 rounded-full p-0 text-[#5a7a5a]" aria-label="Go back to browse">
+					<ArrowLeft class="size-6" strokeWidth={2.5} />
+				</Button>
 				<h1 class="truncate text-3xl font-bold text-foreground">Catalog</h1>
 			</div>
 
@@ -122,7 +124,7 @@
 
 		<div class="flex flex-wrap gap-2 pb-1">
 			{#each filters as filter (filter.id)}
-				<button
+				<Button
 					onclick={() => (activeFilter = filter.id)}
 					class={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${activeFilter ===
 					filter.id
@@ -133,7 +135,7 @@
 						<span class="mr-1">✓</span>
 					{/if}
 					{filter.label}
-				</button>
+				</Button>
 			{/each}
 		</div>
 	</header>
@@ -141,8 +143,8 @@
 	<div class="flex-1 overflow-auto px-4 pb-24">
 		<div class="grid grid-cols-2 gap-3">
 			{#each products as product (product.id)}
-				<div class="flex flex-col">
-					<div class="relative mb-3 flex flex-1 flex-col items-center justify-center rounded-xl bg-[#f5f8f2] p-4">
+				<div class="flex flex-col gap-3">
+					<Card.Root class="relative flex flex-1 flex-col items-center justify-center rounded-xl bg-[#f5f8f2] p-4">
 						<span class="absolute right-3 top-3 text-lg font-bold text-foreground">${product.price.toFixed(2)}</span>
 
 						<div class="mb-2 flex h-32 w-full items-center justify-center">
@@ -158,11 +160,11 @@
 						</div>
 
 						<h3 class="line-clamp-2 text-center text-sm font-semibold text-foreground">{product.name}</h3>
-					</div>
+					</Card.Root>
 
-					<a href="/demo/cart" class="block w-full rounded-full bg-[#3d5a3d] py-2 text-center text-xs font-medium text-white">
+					<Button href="/demo/cart" class="h-auto w-full rounded-full py-2 text-xs font-medium">
 						Add to Cart ({product.available} Available)
-					</a>
+					</Button>
 				</div>
 			{/each}
 		</div>

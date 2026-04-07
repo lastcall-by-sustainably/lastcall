@@ -1,9 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/seo.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import { Input } from '$lib/components/ui/input';
+	import { Separator } from '$lib/components/ui/separator';
 	import Search from '@lucide/svelte/icons/search';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
-	import ShoppingBasket from '@lucide/svelte/icons/shopping-basket';
-	import User from '@lucide/svelte/icons/user';
 
 	type EnhancedImageModule = { default: any };
 
@@ -84,16 +85,16 @@
 		<div class="flex items-center gap-3">
 			<div class="relative flex-1">
 				<Search class="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-foreground/50" />
-				<input
+				<Input
 					type="text"
 					placeholder="City, State, or ZIP"
 					bind:value={searchQuery}
-					class="w-full rounded-2xl border-2 border-foreground bg-background py-3 pl-12 pr-4 text-foreground placeholder:text-foreground/50 focus:border-primary focus:outline-none"
+					class="h-auto w-full rounded-2xl border-2 border-foreground bg-background py-3 pl-12 pr-4 text-foreground placeholder:text-foreground/50"
 				/>
 			</div>
-			<button class="rounded-lg p-2 transition-colors hover:bg-muted" aria-label="Open filters">
+			<Button variant="ghost" size="icon" class="h-10 w-10 rounded-lg" aria-label="Open filters">
 				<SlidersHorizontal class="h-6 w-6 text-foreground" />
-			</button>
+			</Button>
 		</div>
 	</div>
 
@@ -103,7 +104,8 @@
 				<h2 class="mb-4 border-b-2 border-foreground pb-2 text-2xl font-bold">{section.title}</h2>
 				<div class="space-y-0">
 					{#each section.stores as store, index (`${section.title}-${store.id}-${index}`)}
-						<div class="flex items-center justify-between border-b border-foreground/10 py-6">
+						<div class="py-6">
+							<div class="flex items-center justify-between">
 							<div class="flex items-center gap-4">
 								<div
 									class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border-2 border-foreground bg-white"
@@ -122,13 +124,17 @@
 									<h3 class="text-lg font-semibold text-foreground">{store.address}</h3>
 								</div>
 							</div>
-							<a
+							<Button
 								href="/demo/browse/stop-and-shop"
-								class="ml-4 whitespace-nowrap rounded-full bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+								class="ml-4 whitespace-nowrap rounded-full px-6 py-2 text-sm font-semibold"
 							>
 								Select
-							</a>
+							</Button>
+							</div>
 						</div>
+						{#if index < section.stores.length - 1}
+							<Separator class="bg-foreground/10" />
+						{/if}
 					{/each}
 				</div>
 			</section>

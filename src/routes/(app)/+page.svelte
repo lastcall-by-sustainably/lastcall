@@ -1,5 +1,7 @@
 <script lang="ts">
   import SEO from "$lib/components/seo.svelte";
+  import { Button } from "$lib/components/ui/button";
+  import * as Card from "$lib/components/ui/card";
   import { Separator } from "$lib/components/ui/separator";
   import logo from "$lib/assets/logo.png?enhanced";
   import designHome from "$lib/assets/design/design-home.png?enhanced";
@@ -28,9 +30,9 @@
         Save the planet and your wallet. LastCall connects you to local grocery stores offering surplus and near-expiration food at a discount.
       </p>
       <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-        <a href="/demo" class="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary/90 transition shadow-sm gap-2">
+        <Button href="/demo" class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm">
           Try the Demo App <ArrowRight class="w-5 h-5 ml-1" />
-        </a>
+        </Button>
       </div>
     </div>
     <div class="flex-1 shrink-0 flex justify-center">
@@ -41,7 +43,7 @@
   </section>
 
   <section class="w-full px-6 py-12">
-    <div class="max-w-5xl mx-auto bg-card border rounded-3xl p-10 md:p-16 text-center shadow-sm relative overflow-hidden">
+    <Card.Root class="max-w-5xl mx-auto rounded-3xl p-10 md:p-16 text-center shadow-sm relative overflow-hidden">
       <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       
       <h2 class="text-3xl font-bold mb-6 text-card-foreground">Why We Re-imagined Groceries</h2>
@@ -50,7 +52,7 @@
         waste. Grocery stores upload surplus or near-expiration items to an online catalog, where you
         can reserve exactly what you want. Our goal is to lower disposal costs for stores, decrease food waste, and provide cheaper grocery options for everyone.
       </p>
-    </div>
+    </Card.Root>
   </section>
 
   <div class="w-full max-w-7xl mx-auto px-6 py-4">
@@ -58,21 +60,21 @@
   </div>
 
   <section class="w-full px-6 py-20 relative">
-    <div class="max-w-[1400px] mx-auto text-center mb-16">
+    <div class="max-w-350 mx-auto text-center mb-16">
       <h2 class="text-3xl font-bold mb-4">A Seamless Experience</h2>
       <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Browse nearby stores, build your cart item by item, and pick it up. Simple and effective.</p>
     </div>
-    <div class="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+    <div class="max-w-350 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
       {#each [
         { title: "Home Page", img: designHome },
         { title: "Store Search", img: designBrowse },
         { title: "Catalog", img: designCatalog },
         { title: "Shopping Cart", img: designCart }
       ] as design}
-        <div class="flex flex-col items-center w-full max-w-[300px] group">
-          <div class="bg-card w-full p-4 rounded-2xl border shadow-sm mb-6 pb-0 group-hover:-translate-y-2 transition-transform duration-300">
+        <div class="flex flex-col items-center w-full max-w-75 group">
+          <Card.Root class="w-full rounded-2xl p-4 pb-0 shadow-sm mb-6 group-hover:-translate-y-2 transition-transform duration-300">
             <enhanced:img src={design.img} alt={design.title} class="w-full object-contain rounded-t-xl" />
-          </div>
+          </Card.Root>
           <h3 class="text-lg font-bold text-foreground flex items-center gap-2">
             <Smartphone class="w-5 h-5 text-primary" /> {design.title}
           </h3>
@@ -93,7 +95,7 @@
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-card border rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Store class="w-6 h-6" />
           </div>
@@ -102,9 +104,9 @@
             Pay for an itemized bag when you please. Does not require a subscription. Options range from $0.25 to $7.50.
           </p>
           <div class="text-2xl font-bold">Pay as you go</div>
-        </div>
+        </Card.Root>
         
-        <div class="bg-card border-2 border-primary rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-md">
+        <Card.Root class="border-2 border-primary rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-md">
           <div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 rounded-bl-xl font-medium text-sm">Most Popular</div>
           <div class="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6">
             <CircleDollarSign class="w-6 h-6" />
@@ -114,9 +116,9 @@
             Get $25 of value to use every single month. Replenishes monthly for consistent savings.
           </p>
           <div class="text-auth"><span class="text-4xl font-bold">$12.99</span><span class="text-muted-foreground">/mo</span></div>
-        </div>
+        </Card.Root>
         
-        <div class="bg-card border rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Leaf class="w-6 h-6" />
           </div>
@@ -125,7 +127,7 @@
             Pay for a full year upfront. Enjoy $25 to use every single month on products all year long.
           </p>
           <div class="text-auth"><span class="text-4xl font-bold">$120</span><span class="text-muted-foreground">/yr</span></div>
-        </div>
+        </Card.Root>
       </div>
     </div>
   </section>
@@ -135,14 +137,14 @@
   </div>
 
   <section class="w-full px-6 py-20 text-primary-foreground text-center">
-    <div class="max-w-5xl mx-auto flex flex-col items-center bg-primary border rounded-3xl p-10 md:p-16 shadow-lg">
+    <Card.Root class="max-w-5xl mx-auto flex flex-col items-center bg-primary rounded-3xl p-10 md:p-16 shadow-lg text-primary-foreground">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Why choose LastCall?</h2>
       <p class="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl">
         Unlike our competitors, we allow users to have more freedom. You pick the groceries you need—our platform is focused on ingredients rather than whole meals. Skip the mystery bags and disappointment, and get exactly the food you want and need.
       </p>
-      <a href="/demo" class="bg-background text-foreground hover:bg-muted font-bold text-lg px-10 py-4 rounded-full transition shadow-lg inline-flex items-center gap-2">
+      <Button href="/demo" variant="secondary" class="h-auto rounded-full px-10 py-4 text-lg font-bold shadow-lg">
         Launch Demo App <ArrowRight class="w-5 h-5" />
-      </a>
-    </div>
+      </Button>
+    </Card.Root>
   </section>
 </div>

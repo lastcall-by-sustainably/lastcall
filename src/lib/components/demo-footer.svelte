@@ -17,21 +17,21 @@
     <Separator />
 
     <div class="w-full flex flex-row items-center p-4">
-      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo/browse">
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/demo/browse') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo/browse">
         <div class="flex flex-col items-center gap-1">
           <SearchIcon class="size-6" />
           Browse
         </div>
       </Button>
 
-      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo/cart">
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/demo/cart') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo/cart">
         <div class="flex flex-col items-center gap-1">
           <ShoppingBagIcon class="size-6" />
           Cart
         </div>
       </Button>
 
-      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo">
+      <Button class={['flex-1 h-full', page.url.pathname.startsWith('/demo/account') ? 'text-foreground' : 'text-muted-foreground']} variant="ghost" href="/demo">
         <div class="flex flex-col items-center gap-1">
           <CircleUserIcon class="size-6" />
           Account

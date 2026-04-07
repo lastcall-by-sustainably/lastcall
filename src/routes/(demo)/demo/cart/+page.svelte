@@ -1,5 +1,8 @@
 <script lang="ts">
   import SEO from '$lib/components/seo.svelte';
+  import { Button } from '$lib/components/ui/button';
+  import * as Card from '$lib/components/ui/card';
+  import { Separator } from '$lib/components/ui/separator';
   import { toast } from 'svelte-sonner';
   import ArrowLeft from '@lucide/svelte/icons/arrow-left';
   import Minus from '@lucide/svelte/icons/minus';
@@ -83,16 +86,16 @@
 
 <div class="mx-auto flex min-h-screen max-w-md flex-col bg-background">
   <header class="flex items-center gap-4 p-4 pt-6">
-    <a href="/demo/browse" class="text-[#5a7a5a]" aria-label="Go back to browse">
-      <ArrowLeft class="h-7 w-7" strokeWidth={2.5} />
-    </a>
+    <Button href="/demo/browse" variant="ghost" size="icon" class="h-10 w-10 rounded-full p-0 text-[#5a7a5a]" aria-label="Go back to browse">
+      <ArrowLeft class="size-6" strokeWidth={2.5} />
+    </Button>
     <h1 class="text-2xl font-bold text-foreground">Shopping Cart</h1>
   </header>
 
   <div class="flex-1 overflow-auto px-4 pb-32">
-    <div class="space-y-3">
+    <div class="space-y-3 pt-1">
       {#each cartItems as item (item.id)}
-        <div class="flex gap-3 rounded-xl bg-[#f5f8f2] p-3">
+        <Card.Root class="flex flex-row items-start gap-3 rounded-xl bg-[#f5f8f2] p-3">
           <div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-white">
             <enhanced:img src={resolveAssetImage(item.image)} alt={item.name} class="h-full w-full object-cover" />
           </div>
@@ -104,38 +107,41 @@
             <p class="mt-2 text-lg font-bold text-[#c4a000]">${item.price.toFixed(2)}</p>
           </div>
 
-          <div class="flex items-end">
+          <div class="flex items-end self-stretch">
             <div class="flex items-center gap-1">
-              <button
+              <Button
                 onclick={() => updateQuantity(item.id, -1)}
-                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#5a7a5a] text-[#5a7a5a]"
+                variant="outline"
+                size="icon"
+                class="h-8 w-8 rounded-full border-2 border-[#5a7a5a] text-[#5a7a5a]"
                 aria-label={`Decrease quantity of ${item.name}`}
               >
                 <Minus class="h-4 w-4" strokeWidth={2.5} />
-              </button>
-              <span class="w-8 text-center font-medium text-foreground">{item.quantity}</span>
-              <button
+              </Button>
+              <span class="w-8 text-center text-base font-medium text-foreground">{item.quantity}</span>
+              <Button
                 onclick={() => updateQuantity(item.id, 1)}
-                class="flex h-8 w-8 items-center justify-center rounded-full bg-[#5a7a5a] text-white"
+                size="icon"
+                class="h-8 w-8 rounded-full bg-[#5a7a5a] text-white hover:bg-[#4c694c]"
                 aria-label={`Increase quantity of ${item.name}`}
               >
                 <Plus class="h-4 w-4" strokeWidth={2.5} />
-              </button>
+              </Button>
             </div>
           </div>
-        </div>
+        </Card.Root>
       {/each}
     </div>
 
-    <a
+    <Button
       href="/demo/browse"
-      class="mt-6 flex w-full items-center justify-center gap-3 rounded-full bg-[#8db48e] py-4 font-medium text-white"
+      class="mt-6 h-auto w-full rounded-full bg-[#8db48e] py-4 text-base font-semibold text-white hover:bg-[#7aa17b]"
     >
-      <ArrowLeft class="h-5 w-5" />
+      <ArrowLeft class="h-5! w-5!" />
       Continue Browsing
-    </a>
+    </Button>
 
-    <div class="my-6 border-t border-border"></div>
+    <Separator class="my-6" />
 
     <div class="mb-6 flex items-center justify-between">
       <span class="text-lg text-foreground">Subtotal</span>
@@ -151,12 +157,12 @@
       ></textarea>
     </div>
 
-    <button
-      class="flex w-full items-center justify-center gap-3 rounded-full bg-[#3d5a3d] py-4 font-medium text-white"
+    <Button
+      class="h-auto w-full rounded-full bg-[#3d5a3d] py-4 text-base font-semibold text-white hover:bg-[#324a32]"
       onclick={() => toast.success('Thanks for your purchase!')}
     >
-      <ShoppingCart class="h-5 w-5" />
+      <ShoppingCart class="h-5! w-5!" />
       Proceed to checkout ({totalItems} items)
-    </button>
+    </Button>
   </div>
 </div>
