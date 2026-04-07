@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
-	import catalogLogo from '$lib/assets/browse/stop-and-shop-logo.png?enhanced';
+	import catalogLogo from '$lib/assets/demo/browse/stop-and-shop-logo.png?enhanced';
 
 	type EnhancedImageModule = { default: any };
 
@@ -17,7 +17,7 @@
 		label: string;
 	}
 
-	const imageModules = import.meta.glob('/src/lib/assets/browse/stop-and-shop/*.{webp,WEBP,png,PNG,jpg,JPG}', {
+	const imageModules = import.meta.glob('/src/lib/assets/demo/browse/stop-and-shop/*.{webp,WEBP,png,PNG,jpg,JPG}', {
 		eager: true,
 		query: {
 			enhanced: true

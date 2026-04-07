@@ -14,7 +14,7 @@
 	}
 
 	const logoModules = import.meta.glob(
-		'/src/lib/assets/browse/**/*.{png,PNG}',
+		'/src/lib/assets/demo/browse/**/*.{png,PNG}',
 		{
 			eager: true,
 			query: {

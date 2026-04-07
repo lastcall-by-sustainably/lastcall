@@ -6,7 +6,7 @@
   import ShoppingCart from '@lucide/svelte/icons/shopping-cart';
 
   const imageModules = import.meta.glob(
-    '/src/lib/assets/cart/*.{avif,AVIF,jpg,JPG}',
+    '/src/lib/assets/demo/cart/*.{avif,AVIF,jpg,JPG}',
     {
     eager: true,
     query: {
