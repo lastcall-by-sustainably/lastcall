@@ -1,6 +1,9 @@
 <script lang="ts">
+  import SEO from "$lib/components/seo.svelte";
   import { Button } from '$lib/components/ui/button';
 </script>
+
+<SEO title="Demo" />
 
 <div class="flex flex-col items-center gap-16 p-8">
   <div class="size-full">

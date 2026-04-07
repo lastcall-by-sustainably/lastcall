@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from "$lib/components/seo.svelte";
   import { Separator } from "$lib/components/ui/separator";
   import logo from "$lib/assets/logo.png?enhanced";
   import designHome from "$lib/assets/design/design-home.png?enhanced";
@@ -11,6 +12,8 @@
   import CircleDollarSign from "@lucide/svelte/icons/circle-dollar-sign";
   import Store from "@lucide/svelte/icons/store";
 </script>
+
+<SEO />
 
 <div class="w-full flex flex-col items-center">
   <section class="w-full max-w-7xl px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">

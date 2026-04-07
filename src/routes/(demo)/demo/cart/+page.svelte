@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SEO from '$lib/components/seo.svelte';
   import { toast } from 'svelte-sonner';
   import ArrowLeft from '@lucide/svelte/icons/arrow-left';
   import Minus from '@lucide/svelte/icons/minus';
@@ -77,6 +78,8 @@
   const subtotal = $derived(cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0));
   const totalItems = $derived(cartItems.reduce((sum, item) => sum + item.quantity, 0));
 </script>
+
+<SEO title="Demo - Shopping Cart" />
 
 <div class="mx-auto flex min-h-screen max-w-md flex-col bg-background">
   <header class="flex items-center gap-4 p-4 pt-6">

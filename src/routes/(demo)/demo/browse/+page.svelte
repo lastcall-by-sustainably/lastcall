@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SEO from '$lib/components/seo.svelte';
 	import Search from '@lucide/svelte/icons/search';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import ShoppingBasket from '@lucide/svelte/icons/shopping-basket';
@@ -75,6 +76,8 @@
 		{ title: "What's Nearby", stores: nearbyStores }
 	];
 </script>
+
+<SEO title="Demo - Browse Stores" />
 
 <div class="min-h-screen bg-background pb-32">
 	<div class="space-y-6 p-6">

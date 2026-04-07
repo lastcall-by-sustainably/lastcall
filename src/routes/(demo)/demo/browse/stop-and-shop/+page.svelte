@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SEO from '$lib/components/seo.svelte';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import catalogLogo from '$lib/assets/demo/browse/stop-and-shop-logo.png?enhanced';
 
@@ -103,6 +104,8 @@
 		{ id: 'sale', label: 'Sale' }
 	];
 </script>
+
+<SEO title="Demo - Stop & Shop Catalog" />
 
 <div class="mx-auto flex min-h-svh w-full max-w-md flex-col overflow-x-hidden bg-background">
 	<header class="p-4 pb-3 pt-6">
