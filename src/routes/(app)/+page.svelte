@@ -31,7 +31,7 @@
       </p>
       <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
         <Button href="/demo" class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm">
-          Try the Demo App <ArrowRight class="w-5 h-5 ml-1" />
+          Try the Demo App <ArrowRight class="size-5 ml-1" />
         </Button>
       </div>
     </div>
@@ -95,7 +95,7 @@
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card.Root class="rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Store class="w-6 h-6" />
           </div>
@@ -106,7 +106,7 @@
           <div class="text-2xl font-bold">Pay as you go</div>
         </Card.Root>
         
-        <Card.Root class="border-2 border-primary rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-md">
+        <Card.Root class="border-2 border-primary rounded-3xl p-8 relative overflow-hidden shadow-md">
           <div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 rounded-bl-xl font-medium text-sm">Most Popular</div>
           <div class="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6">
             <CircleDollarSign class="w-6 h-6" />
@@ -118,7 +118,7 @@
           <div class="text-auth"><span class="text-4xl font-bold">$12.99</span><span class="text-muted-foreground">/mo</span></div>
         </Card.Root>
         
-        <Card.Root class="rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Leaf class="w-6 h-6" />
           </div>
@@ -137,13 +137,13 @@
   </div>
 
   <section class="w-full px-6 py-20 text-primary-foreground text-center">
-    <Card.Root class="max-w-5xl mx-auto flex flex-col items-center bg-primary rounded-3xl p-10 md:p-16 shadow-lg text-primary-foreground">
+    <Card.Root class="max-w-5xl mx-auto items-center bg-primary rounded-3xl p-10 md:p-16 shadow-lg text-primary-foreground">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">Why choose LastCall?</h2>
       <p class="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl">
         Unlike our competitors, we allow users to have more freedom. You pick the groceries you need—our platform is focused on ingredients rather than whole meals. Skip the mystery bags and disappointment, and get exactly the food you want and need.
       </p>
       <Button href="/demo" variant="secondary" class="h-auto rounded-full px-10 py-4 text-lg font-bold shadow-lg">
-        Launch Demo App <ArrowRight class="w-5 h-5" />
+        Launch Demo App <ArrowRight class="size-5" />
       </Button>
     </Card.Root>
   </section>
