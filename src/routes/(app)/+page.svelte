@@ -28,7 +28,7 @@
         Save the planet and your wallet. LastCall connects you to local grocery stores offering surplus and near-expiration food at a discount.
       </p>
       <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-        <a href="/demo/browse" class="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary/90 transition shadow-sm gap-2">
+        <a href="/demo" class="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary/90 transition shadow-sm gap-2">
           Try the Demo App <ArrowRight class="w-5 h-5 ml-1" />
         </a>
       </div>
@@ -140,7 +140,7 @@
       <p class="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl">
         Unlike our competitors, we allow users to have more freedom. You pick the groceries you need—our platform is focused on ingredients rather than whole meals. Skip the mystery bags and disappointment, and get exactly the food you want and need.
       </p>
-      <a href="/demo/browse" class="bg-background text-foreground hover:bg-muted font-bold text-lg px-10 py-4 rounded-full transition shadow-lg inline-flex items-center gap-2">
+      <a href="/demo" class="bg-background text-foreground hover:bg-muted font-bold text-lg px-10 py-4 rounded-full transition shadow-lg inline-flex items-center gap-2">
         Launch Demo App <ArrowRight class="w-5 h-5" />
       </a>
     </div>
