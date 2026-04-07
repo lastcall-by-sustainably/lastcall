@@ -3,6 +3,7 @@
   import { Button } from '$lib/components/ui/button';
   import * as Card from '$lib/components/ui/card';
   import { Separator } from '$lib/components/ui/separator';
+  import { Textarea } from '$lib/components/ui/textarea';
   import { toast } from 'svelte-sonner';
   import ArrowLeft from '@lucide/svelte/icons/arrow-left';
   import Minus from '@lucide/svelte/icons/minus';
@@ -150,11 +151,11 @@
 
     <div class="mb-6">
       <label for="additional-requests" class="mb-3 block text-lg text-foreground">Additional requests</label>
-      <textarea
+      <Textarea
         id="additional-requests"
         bind:value={additionalRequests}
-        class="min-h-20 w-full resize-none rounded-lg border border-border bg-background p-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-      ></textarea>
+        class="min-h-20 resize-none p-3"
+      />
     </div>
 
     <Button
