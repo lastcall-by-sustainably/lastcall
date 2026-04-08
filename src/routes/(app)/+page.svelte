@@ -149,12 +149,12 @@
   </div>
 
   <section class="w-full px-6 py-20 text-primary-foreground text-center">
-    <Card.Root class="max-w-5xl mx-auto items-center bg-primary rounded-3xl p-10 md:p-16 shadow-lg text-primary-foreground">
-      <h2 class="text-3xl md:text-5xl font-bold mb-6">Why choose LastCall?</h2>
+    <Card.Root class="max-w-5xl mx-auto items-center bg-primary rounded-3xl p-6 sm:p-8 md:p-16 shadow-lg text-primary-foreground">
+      <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Why choose LastCall?</h2>
       <p class="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-10 max-w-3xl">
         Unlike our competitors, we allow users to have more freedom. You pick the groceries you need—our platform is focused on ingredients rather than whole meals. Skip the mystery bags and disappointment, and get exactly the food you want and need.
       </p>
-      <Button href="/demo" variant="secondary" class="h-auto rounded-full px-10 py-4 text-lg font-bold shadow-lg">
+      <Button href="/demo" variant="secondary" class="h-auto w-full sm:w-auto rounded-full px-6 sm:px-10 py-4 text-base sm:text-lg font-bold shadow-lg whitespace-normal">
         Launch Demo App <ArrowRight class="size-5" />
       </Button>
     </Card.Root>
