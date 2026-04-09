@@ -14,6 +14,7 @@
   import CircleDollarSign from "@lucide/svelte/icons/circle-dollar-sign";
   import Store from "@lucide/svelte/icons/store";
   import GraduationCap from "@lucide/svelte/icons/graduation-cap";
+  import Check from "@lucide/svelte/icons/check";
 </script>
 
 <SEO />
@@ -101,49 +102,62 @@
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 relative flex flex-col overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Store class="w-6 h-6" />
           </div>
-          <h3 class="text-xl font-bold mb-2">One Time Service</h3>
-          <p class="text-muted-foreground mb-6 flex-1">
-            Pay for an itemized bag when you please. Does not require a subscription. Options range from $0.25 to $7.50.
-          </p>
-          <div class="text-2xl font-bold">Pay as you go</div>
+          <h3 class="text-xl font-bold mb-2">Pay Per Item</h3>
+          <p class="text-muted-foreground mb-4">Pay per item when you please. Does not require a subscription.</p>
+          <ul class="space-y-3 mb-6 flex-1 text-sm text-muted-foreground text-left">
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Pay only for what you want</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> No fixed bag fees or extra charges</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Options range from $0.25 to $7.50</li>
+          </ul>
+          <div class="text-2xl font-bold mt-auto">Pay as you go</div>
         </Card.Root>
 
-        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 relative flex flex-col overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <GraduationCap class="w-6 h-6" />
           </div>
           <h3 class="text-xl font-bold mb-2">Student Plan</h3>
-          <p class="text-muted-foreground mb-6 flex-1">
-            Requires an active .edu email address. Get $25 of value to use every single month on products.
-          </p>
-          <div class="text-auth"><span class="text-4xl font-bold">$9</span><span class="text-muted-foreground">/mo</span></div>
+          <p class="text-muted-foreground mb-4">Requires an active .edu email address.</p>
+          <ul class="space-y-3 mb-6 flex-1 text-sm text-muted-foreground text-left">
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> 20% off discount on every bag</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Early & exclusive access to select places</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Exclusive student merch</li>
+          </ul>
+          <div class="text-auth mt-auto"><span class="text-4xl font-bold">$9.99</span><span class="text-muted-foreground">/mo</span></div>
         </Card.Root>
         
-        <Card.Root class="border-2 border-primary rounded-3xl p-8 relative overflow-hidden shadow-md">
+        <Card.Root class="border-2 border-primary rounded-3xl p-8 relative flex flex-col overflow-hidden shadow-md">
           <div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 rounded-bl-xl font-medium text-sm">Most Popular</div>
           <div class="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center mb-6">
             <CircleDollarSign class="w-6 h-6" />
           </div>
           <h3 class="text-xl font-bold mb-2">Monthly Subscription</h3>
-          <p class="text-muted-foreground mb-6 flex-1">
-            Get $25 of value to use every single month. Replenishes monthly for consistent savings.
-          </p>
-          <div class="text-auth"><span class="text-4xl font-bold">$12</span><span class="text-muted-foreground">/mo</span></div>
+          <p class="text-muted-foreground mb-4">Consistent savings for your ongoing grocery needs.</p>
+          <ul class="space-y-3 mb-6 flex-1 text-sm text-muted-foreground text-left">
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> 20% off discount on every bag</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Early access to restocks</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Standard LastCall merch</li>
+          </ul>
+          <div class="text-auth mt-auto"><span class="text-4xl font-bold">$12.99</span><span class="text-muted-foreground">/mo</span></div>
         </Card.Root>
+
         
-        <Card.Root class="rounded-3xl p-8 relative overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
+        <Card.Root class="rounded-3xl p-8 relative flex flex-col overflow-hidden shadow-sm hover:border-primary/50 transition-colors">
           <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
             <Leaf class="w-6 h-6" />
           </div>
           <h3 class="text-xl font-bold mb-2">Yearly Subscription</h3>
-          <p class="text-muted-foreground mb-6 flex-1">
-            Pay for a full year upfront. Enjoy $25 to use every single month on products all year long.
-          </p>
-          <div class="text-auth"><span class="text-4xl font-bold">$120</span><span class="text-muted-foreground">/yr</span></div>
+          <p class="text-muted-foreground mb-4">Pay for a full year upfront with maximum savings.</p>
+          <ul class="space-y-3 mb-6 flex-1 text-sm text-muted-foreground text-left">
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> 20% off discount on every bag</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Standard LastCall merch</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> One convenient payment</li>
+          </ul>
+          <div class="text-auth mt-auto"><span class="text-4xl font-bold">$129.99</span><span class="text-muted-foreground">/yr</span></div>
         </Card.Root>
       </div>
     </div>
