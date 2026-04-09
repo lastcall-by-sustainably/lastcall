@@ -82,6 +82,11 @@
         </div>
       {/each}
     </div>
+    <div class="max-w-350 mx-auto mt-12 flex justify-center">
+      <Button href="/demo" class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm">
+        View Live Demo <ArrowRight class="size-5 ml-1" />
+      </Button>
+    </div>
   </section>
 
   <div class="w-full max-w-7xl mx-auto px-6 py-4">
