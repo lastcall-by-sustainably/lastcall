@@ -155,7 +155,7 @@
           <ul class="space-y-3 mb-6 flex-1 text-sm text-muted-foreground text-left">
             <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> 20% off discount on every bag</li>
             <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> Standard LastCall merch</li>
-            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> One convenient payment</li>
+            <li class="flex items-start gap-2"><Check class="w-4 h-4 mt-0.5 text-primary shrink-0" /> One convenient annual payment</li>
           </ul>
           <div class="text-auth mt-auto"><span class="text-4xl font-bold">$129.99</span><span class="text-muted-foreground">/yr</span></div>
         </Card.Root>
