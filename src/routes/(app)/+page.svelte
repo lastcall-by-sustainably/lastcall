@@ -3,6 +3,7 @@
   import { Button } from "$lib/components/ui/button";
   import * as Card from "$lib/components/ui/card";
   import { Separator } from "$lib/components/ui/separator";
+  import * as Accordion from "$lib/components/ui/accordion/index.js";
   import logo from "$lib/assets/logo.png?enhanced";
   import designHome from "$lib/assets/design/design-home.png?enhanced";
   import designBrowse from "$lib/assets/design/design-browse.png?enhanced";
@@ -224,6 +225,46 @@
           <div class="text-auth mt-auto"><span class="text-4xl font-bold">$129.99</span><span class="text-muted-foreground">/yr</span></div>
         </Card.Root>
       </div>
+    </div>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 py-4">
+    <Separator class="bg-border/60" />
+  </div>
+
+  <section class="w-full px-6 py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+        <p class="text-muted-foreground text-lg">Everything you need to know about LastCall.</p>
+      </div>
+      
+      <Accordion.Root type="single" class="w-full">
+        <Accordion.Item value="item-1">
+          <Accordion.Trigger class="text-left text-lg font-medium">Are the items still fresh and safe to eat?</Accordion.Trigger>
+          <Accordion.Content class="text-muted-foreground text-base leading-relaxed">
+            Yes, absolutely. All items available on LastCall are perfectly safe and good to eat. We partner directly with local grocery stores that upload surplus items or items that are nearing their "sell-by" dates. Our priority is quality and safety while reducing food waste.
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item-2">
+          <Accordion.Trigger class="text-left text-lg font-medium">When do I need to pick up my order?</Accordion.Trigger>
+          <Accordion.Content class="text-muted-foreground text-base leading-relaxed">
+            Pickup times depend on the specific store's operating hours and when the items were reserved. When building your cart, you will see a designated pickup window for your selected store. Simply head to the store during that window and show your order confirmation.
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item-3">
+          <Accordion.Trigger class="text-left text-lg font-medium">What stores are currently on the platform?</Accordion.Trigger>
+          <Accordion.Content class="text-muted-foreground text-base leading-relaxed">
+            We are actively expanding our network of local grocery partners. As we roll out to more neighborhoods, you'll be able to browse participating stores directly in the app. Keep an eye out—we might be partnering with your favorite local market very soon!
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item-4">
+          <Accordion.Trigger class="text-left text-lg font-medium">How is this different from other food-saving apps?</Accordion.Trigger>
+          <Accordion.Content class="text-muted-foreground text-base leading-relaxed">
+            Unlike competitors that sell non-transparent "mystery bags," LastCall gives you complete control. You can browse the available inventory and reserve exact ingredients and items. No surprises—you only pay for the groceries you actually want and need.
+          </Accordion.Content>
+        </Accordion.Item>
+      </Accordion.Root>
     </div>
   </section>
 
