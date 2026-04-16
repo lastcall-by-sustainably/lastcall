@@ -62,6 +62,70 @@
   </div>
 
   <section class="w-full px-6 py-20 relative">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+      <p class="text-muted-foreground text-lg">Three simple steps to save money and reduce food waste.</p>
+    </div>
+    
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative">
+      <!-- Connecting Line -->
+      <div class="hidden md:block absolute top-12 left-[16.66%] right-[16.66%] h-0.5 bg-border/60 -z-10"></div>
+      
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center mb-6 relative shadow-sm group">
+          <div class="absolute inset-0 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors duration-500"></div>
+          <!-- Animated Search -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary relative z-10">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path class="origin-[16px_16px] animate-[spin_3s_ease-in-out_infinite]" d="m21 21-4.35-4.35"></path>
+          </svg>
+          <div class="absolute -bottom-3 bg-primary text-primary-foreground text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-background">1</div>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Browse Local Stores</h3>
+        <p class="text-muted-foreground">Find nearby grocery stores offering surplus and near-expiration items.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center mb-6 relative shadow-sm group">
+          <div class="absolute inset-0 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors duration-500"></div>
+          <!-- Animated Bag/Cart -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary relative z-10">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <!-- Dropping item animation -->
+            <path class="animate-bounce" d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <div class="absolute -bottom-3 bg-primary text-primary-foreground text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-background">2</div>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Build Your Cart</h3>
+        <p class="text-muted-foreground">Select the exact groceries you need. No surprise bags.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center">
+        <div class="w-24 h-24 rounded-full bg-background border-2 border-primary/20 flex items-center justify-center mb-6 relative shadow-sm group">
+          <div class="absolute inset-0 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors duration-500"></div>
+          <!-- Animated Pickup / Location -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary relative z-10">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+            <!-- Checkmark pulsing -->
+            <path class="animate-pulse" d="m9 10 2 2 4-4"></path>
+          </svg>
+          <div class="absolute -bottom-3 bg-primary text-primary-foreground text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-background">3</div>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Pick It Up</h3>
+        <p class="text-muted-foreground">Head to the store, grab your bag, and enjoy your savings.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 py-4">
+    <Separator class="bg-border/60" />
+  </div>
+
+  <section class="w-full px-6 py-20 relative">
     <div class="max-w-350 mx-auto text-center mb-16">
       <h2 class="text-3xl font-bold mb-4">A Seamless Experience</h2>
       <p class="text-muted-foreground text-lg max-w-2xl mx-auto">Browse nearby stores, build your cart item by item, and pick it up. Simple and effective.</p>
