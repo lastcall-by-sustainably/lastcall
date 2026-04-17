@@ -96,8 +96,8 @@
   <div class="flex-1 overflow-auto px-4 pb-32">
     <div class="space-y-3 pt-1">
       {#each cartItems as item (item.id)}
-        <Card.Root class="flex flex-row items-start gap-3 rounded-xl bg-[#f5f8f2] p-3">
-          <div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-white">
+        <Card.Root class="flex flex-row items-start gap-3 rounded-xl bg-[#f5f8f2] p-3 dark:bg-[#243224]">
+          <div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-white dark:bg-slate-900">
             <enhanced:img src={resolveAssetImage(item.image)} alt={item.name} class="h-full w-full object-cover" />
           </div>
 
@@ -123,7 +123,7 @@
               <Button
                 onclick={() => updateQuantity(item.id, 1)}
                 size="icon"
-                class="h-8 w-8 rounded-full bg-[#5a7a5a] text-white hover:bg-[#4c694c]"
+                class="h-8 w-8 rounded-full bg-[#5a7a5a] text-white hover:bg-[#4c694c] dark:bg-[#3f563f] dark:hover:bg-[#344834]"
                 aria-label={`Increase quantity of ${item.name}`}
               >
                 <Plus class="h-4 w-4" strokeWidth={2.5} />
@@ -136,7 +136,7 @@
 
     <Button
       href="/demo/browse"
-      class="mt-6 h-auto w-full rounded-full bg-[#8db48e] py-4 text-base font-semibold text-white hover:bg-[#7aa17b]"
+      class="mt-6 h-auto w-full rounded-full bg-[#8db48e] py-4 text-base font-semibold text-white hover:bg-[#7aa17b] dark:bg-[#5b7a5c] dark:hover:bg-[#4d684e]"
     >
       <ArrowLeft class="h-5! w-5!" />
       Continue Browsing
@@ -159,7 +159,7 @@
     </div>
 
     <Button
-      class="h-auto w-full rounded-full bg-[#3d5a3d] py-4 text-base font-semibold text-white hover:bg-[#324a32]"
+      class="h-auto w-full rounded-full bg-[#3d5a3d] py-4 text-base font-semibold text-white hover:bg-[#324a32] dark:bg-[#2e442e] dark:hover:bg-[#243624]"
       onclick={() => toast.success('Thanks for your purchase!')}
     >
       <ShoppingCart class="h-5! w-5!" />

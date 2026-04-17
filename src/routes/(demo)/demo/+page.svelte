@@ -17,6 +17,6 @@
 
   <div class="w-full max-w-72 flex flex-col gap-4">
     <Button class="h-16 w-full text-xl font-semibold rounded-full border-border border-4" variant="default" size="lg" href="/demo/browse">Log in</Button>
-    <Button class="h-16 w-full text-xl font-semibold rounded-full border-border border-4" variant="outline" size="lg" href="/demo/sign-up">Sign up</Button>
+    <Button class="h-16 w-full text-xl font-semibold rounded-full border-border border-4 dark:bg-secondary dark:hover:bg-secondary/80" variant="outline" size="lg" href="/demo/browse">Sign up</Button>
   </div>
 </div>

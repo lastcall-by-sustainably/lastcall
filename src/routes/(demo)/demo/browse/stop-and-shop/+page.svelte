@@ -128,8 +128,8 @@
 					onclick={() => (activeFilter = filter.id)}
 					class={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${activeFilter ===
 					filter.id
-						? 'bg-[#3d5a3d] text-white'
-						: 'bg-[#b8d9b4] text-foreground'}`}
+						? 'bg-[#3d5a3d] text-white dark:bg-[#2f442f]'
+						: 'bg-[#b8d9b4] text-foreground dark:bg-[#4f6650] dark:text-white'}`}
 				>
 					{#if filter.id === 'available' && activeFilter === 'available'}
 						<span class="mr-1">✓</span>
@@ -144,7 +144,7 @@
 		<div class="grid grid-cols-2 gap-3">
 			{#each products as product (product.id)}
 				<div class="flex flex-col gap-3">
-					<Card.Root class="relative flex flex-1 flex-col items-center justify-center rounded-xl bg-[#f5f8f2] p-4">
+					<Card.Root class="relative flex flex-1 flex-col items-center justify-center rounded-xl bg-[#f5f8f2] p-4 dark:bg-[#243224]">
 						<span class="absolute right-3 top-3 text-lg font-bold text-foreground">${product.price.toFixed(2)}</span>
 
 						<div class="mb-2 flex h-32 w-full items-center justify-center">

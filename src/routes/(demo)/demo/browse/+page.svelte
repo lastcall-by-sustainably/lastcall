@@ -108,7 +108,7 @@
 							<div class="flex items-center justify-between">
 							<div class="flex items-center gap-4">
 								<div
-									class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border-2 border-foreground bg-white"
+									class="flex h-20 w-20 shrink-0 items-center justify-center rounded-lg border-2 border-foreground bg-white dark:bg-slate-900"
 								>
 									{#if resolveStoreLogo(store.logo)}
 										<enhanced:img
