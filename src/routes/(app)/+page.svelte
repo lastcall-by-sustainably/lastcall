@@ -19,6 +19,7 @@
   import Check from "@lucide/svelte/icons/check";
   import Mail from "@lucide/svelte/icons/mail";
   import Copy from "@lucide/svelte/icons/copy";
+  import ExternalLinkIcon from "@lucide/svelte/icons/external-link";
   import ContactForm from "$lib/components/contact-form/contact-form.svelte";
   import { toast } from "svelte-sonner";
 
@@ -171,6 +172,22 @@
         View Live Demo <ArrowRight class="size-5 ml-1" />
       </Button>
     </div>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 py-4">
+    <Separator class="bg-border/60" />
+  </div>
+
+  <section class="w-full px-6 py-16 relative">
+    <Card.Root class="max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center shadow-sm bg-primary/5 border-primary/20">
+      <h2 class="text-3xl font-bold mb-4 text-card-foreground">Help Us Shape LastCall</h2>
+      <p class="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+        Interested in joining the LastCall community? We are currently gathering feedback from potential users to make sure we build the best possible experience. Take our quick survey and let your voice be heard!
+      </p>
+      <Button onclick={() => toast.info('TODO: We will add the survey soon!')} class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm">
+        Take Our Survey <ExternalLinkIcon class="size-5 ml-1" />
+      </Button>
+    </Card.Root>
   </section>
 
   <div class="w-full max-w-7xl mx-auto px-6 py-4">
