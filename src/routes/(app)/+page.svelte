@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { PageProps } from './$types';
   import SEO from "$lib/components/seo.svelte";
   import { Button } from "$lib/components/ui/button";
   import * as Card from "$lib/components/ui/card";
@@ -16,6 +17,23 @@
   import Store from "@lucide/svelte/icons/store";
   import GraduationCap from "@lucide/svelte/icons/graduation-cap";
   import Check from "@lucide/svelte/icons/check";
+  import Mail from "@lucide/svelte/icons/mail";
+  import Copy from "@lucide/svelte/icons/copy";
+  import ContactForm from "$lib/components/contact-form/contact-form.svelte";
+  import { toast } from "svelte-sonner";
+
+  let { data }: PageProps = $props();
+
+  const emailAddress = "lastcallbysustainably@gmail.com";
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress);
+      toast.success("Email copied to clipboard!");
+    } catch {
+      toast.error("Failed to copy email.");
+    }
+  };
 </script>
 
 <SEO />
@@ -282,5 +300,39 @@
         Launch Demo App <ArrowRight class="size-5" />
       </Button>
     </Card.Root>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 py-4">
+    <Separator class="bg-border/60" />
+  </div>
+
+  <section class="w-full px-6 py-20 pb-20">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+      <p class="text-muted-foreground text-lg">Have questions? We'd love to hear from you.</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <Card.Root class="rounded-3xl p-8 shadow-sm h-full flex flex-col justify-center text-center items-center">
+        <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+          <Mail class="w-8 h-8" />
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Email Us</h3>
+        <p class="text-muted-foreground mb-8">
+          Send us a message and we'll reply as soon as possible.
+        </p>
+        <div class="flex items-center gap-4 bg-muted/50 p-4 rounded-xl border w-full max-w-sm justify-between">
+          <span class="font-medium truncate pl-2 select-all">{emailAddress}</span>
+          <Button variant="outline" size="icon" class="shrink-0" title="Copy Email" onclick={copyEmail}>
+            <Copy class="w-4 h-4" />
+          </Button>
+        </div>
+      </Card.Root>
+
+      <Card.Root class="rounded-3xl p-8 shadow-sm">
+        <h3 class="text-2xl font-bold mb-6 text-center">Contact Form</h3>
+        <ContactForm {data} />
+      </Card.Root>
+    </div>
   </section>
 </div>
