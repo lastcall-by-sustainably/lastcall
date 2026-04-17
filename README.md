@@ -1,26 +1,19 @@
-# sv
+# LastCall
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Food is calling, pick up!
 
-## Creating a project
+## Tech stack
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.12.8 create --template minimal --types ts --install npm ./
-```
+- [Svelte](https://svelte.dev)
+- [SvelteKit](https://svelte.dev/docs/kit)
+- [Tailwind CSS](https://tailwindcss.com)
+- [shadcn-svelte](https://www.shadcn-svelte.com)
+- [Resend](https://resend.com)
+- [Vercel](https://vercel.com)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've installed dependencies with `npm install`, start a development server:
 
 ```sh
 npm run dev
