@@ -61,7 +61,7 @@
     </div>
     <div class="flex-1 shrink-0 flex justify-center">
       <div class="relative">
-        <enhanced:img src={logo} alt="LastCall Logo" class="h-64 md:h-80 w-auto object-contain drop-shadow-md" />
+        <enhanced:img src={logo} alt="LastCall Logo" class="h-64 md:h-80 w-auto object-contain drop-shadow-md" fetchpriority="high" />
       </div>
     </div>
   </section>
