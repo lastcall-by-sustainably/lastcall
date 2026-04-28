@@ -14,6 +14,7 @@
     href="https://github.com/lastcall-by-sustainably/lastcall"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="GitHub repository"
   >
     <GitHubIcon />
   </Button>
