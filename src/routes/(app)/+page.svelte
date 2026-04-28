@@ -17,6 +17,8 @@
   import Store from "@lucide/svelte/icons/store";
   import GraduationCap from "@lucide/svelte/icons/graduation-cap";
   import Check from "@lucide/svelte/icons/check";
+  import X from "@lucide/svelte/icons/x";
+  import Minus from "@lucide/svelte/icons/minus";
   import Mail from "@lucide/svelte/icons/mail";
   import Copy from "@lucide/svelte/icons/copy";
   import ExternalLinkIcon from "@lucide/svelte/icons/external-link";
@@ -300,6 +302,42 @@
           </Accordion.Content>
         </Accordion.Item>
       </Accordion.Root>
+    </div>
+  </section>
+
+  <div class="w-full max-w-7xl mx-auto px-6 py-4">
+    <Separator class="bg-border/60" />
+  </div>
+
+  <section class="w-full px-6 py-20 relative">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">LastCall vs. Too Good To Go</h2>
+      <p class="text-muted-foreground text-lg">See why picking your own groceries is the better way to save.</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- LastCall Card -->
+      <Card.Root class="rounded-3xl p-8 border-2 border-primary shadow-md relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 rounded-bl-xl font-medium text-sm">LastCall</div>
+        <h3 class="text-2xl font-bold mb-6">LastCall</h3>
+        <ul class="space-y-4 text-left">
+          <li class="flex items-start gap-3"><Check class="w-5 h-5 text-primary shrink-0 mt-0.5" /> <span><strong>Pick exactly what you want</strong> from live inventory</span></li>
+          <li class="flex items-start gap-3"><Check class="w-5 h-5 text-primary shrink-0 mt-0.5" /> <span><strong>Zero surprises</strong>—know exactly what you're getting</span></li>
+          <li class="flex items-start gap-3"><Check class="w-5 h-5 text-primary shrink-0 mt-0.5" /> <span>Focuses on <strong>staple groceries and ingredients</strong></span></li>
+          <li class="flex items-start gap-3"><Check class="w-5 h-5 text-primary shrink-0 mt-0.5" /> <span><strong>Flexible pricing</strong> from single items to discounted subscriptions</span></li>
+        </ul>
+      </Card.Root>
+
+      <!-- TGTG Card -->
+      <Card.Root class="rounded-3xl p-8 shadow-sm opacity-90 border-muted">
+        <h3 class="text-2xl font-bold mb-6 text-muted-foreground">Too Good To Go</h3>
+        <ul class="space-y-4 text-left text-muted-foreground">
+          <li class="flex items-start gap-3"><X class="w-5 h-5 text-destructive shrink-0 mt-0.5" /> <span><strong>Mystery bags</strong>—you never know what's inside</span></li>
+          <li class="flex items-start gap-3"><X class="w-5 h-5 text-destructive shrink-0 mt-0.5" /> <span><strong>Allergy risks</strong> and potential for unwanted items</span></li>
+          <li class="flex items-start gap-3"><Minus class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" /> <span>Mostly <strong>baked goods or restaurant leftovers</strong></span></li>
+          <li class="flex items-start gap-3"><Minus class="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" /> <span><strong>Flat fee</strong> per mystery bag</span></li>
+        </ul>
+      </Card.Root>
     </div>
   </section>
 
