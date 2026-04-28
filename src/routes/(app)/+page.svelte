@@ -302,6 +302,16 @@
           </Accordion.Content>
         </Accordion.Item>
       </Accordion.Root>
+
+      <div class="mt-16 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-semibold mb-4">
+          <Leaf class="w-4 h-4" /> Public Interest Technology (PIT)
+        </div>
+        <h3 class="text-2xl font-bold mb-4">A Commitment to the Common Good</h3>
+        <p class="text-muted-foreground text-base leading-relaxed max-w-3xl mx-auto">
+          LastCall is built on the principles of <strong>Public Interest Technology (PIT)</strong>. We prioritize sustainability, community empowerment, and equitable access to fresh food while minimizing waste and reducing our environmental footprint.
+        </p>
+      </div>
     </div>
   </section>
 
