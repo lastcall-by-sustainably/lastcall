@@ -28,11 +28,16 @@
   let { data }: PageProps = $props();
 
   const emailAddress = "lastcallbysustainably@gmail.com";
+  let copied = $state(false);
 
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(emailAddress);
       toast.success("Email copied to clipboard!");
+      copied = true;
+      setTimeout(() => {
+        copied = false;
+      }, 2000);
     } catch {
       toast.error("Failed to copy email.");
     }
@@ -389,7 +394,11 @@
         <div class="flex items-center gap-4 bg-muted/50 p-4 rounded-xl border w-full max-w-sm justify-between">
           <span class="font-medium truncate pl-2 select-all">{emailAddress}</span>
           <Button variant="outline" size="icon" class="shrink-0" title="Copy Email" onclick={copyEmail}>
-            <Copy class="w-4 h-4" />
+            {#if copied}
+              <Check class="w-4 h-4 text-green-600" />
+            {:else}
+              <Copy class="w-4 h-4" />
+            {/if}
           </Button>
         </div>
       </Card.Root>
