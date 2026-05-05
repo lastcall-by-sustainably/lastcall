@@ -191,7 +191,7 @@
       <p class="text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto mb-8">
         Interested in joining the LastCall community? We are currently gathering feedback from potential users to make sure we build the best possible experience. Take our quick survey and let your voice be heard!
       </p>
-      <Button onclick={() => toast.info('TODO: We will add the survey soon!')} class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm">
+      <Button class="h-auto rounded-full px-8 py-3.5 text-base font-semibold shadow-sm" href="https://forms.gle/VHmwVSELY6V6DQYZ8" target="_blank" rel="noopener noreferrer">
         Take Our Survey <ExternalLinkIcon class="size-5 ml-1" />
       </Button>
     </Card.Root>
